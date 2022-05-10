@@ -1,0 +1,57 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <!--<meta http-equiv="refresh" content="180">-->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Drift Info | NUKE</title>
+    <link rel="stylesheet" href="style/main.css">
+</head>
+<body>
+<header></header>
+<main>
+<h1>DRIFT Info</h1>
+<p id="selectText">Vælg en lokation</p>
+
+<!--<img src="" usemap="#image-map">-->
+<img id="drift" src="">
+
+<map name="kort">
+    <area target="" alt="Drift Status Thisted" title="Drift Status Thisted" href="index.html?loc=thisted" coords="357,205,48" shape="circle">
+    <area target="" alt="Drift Status HQ" title="Drift Status HQ" href="index.html?loc=hq" coords="1031,344,41" shape="circle">
+</map>
+<map name="rotator">
+    <area target="_blank" alt="Dizzy Mizz Lizzy - Rotator (1996)" title="Dizzy Mizz Lizzy - Rotator (1996)" href="https://www.youtube.com/watch?v=r9z91Nx6NZ4&amp;list=PLkd-rIpGhFIU9xrVZF8yqfnUjg6dmCN28" coords="594,319,1156,422" shape="rect">
+</map>
+
+<script src="JS/status.js"></script>
+<script>
+    //TODO Move this shit to JS/status.js
+    if (getUrlVars()["loc"]) {
+        var indexLink = document.createElement("a")
+        indexLink.textContent = "Tilbage til kort"
+        indexLink.href = "./index.html"
+        indexLink.id = "indexLink"
+        document.getElementById("selectText").innerHTML = ""
+        document.getElementById("selectText").appendChild(indexLink)
+        
+        
+    }
+    if (getUrlVars()["loc"] == "thisted") {
+        console.log("Funny enabled THisted")
+        document.getElementById("drift").src = "img/thisted-status.png"
+        document.getElementById("drift").useMap = "#rotator"
+    } else if (getUrlVars()["loc"] == "hq") {
+        console.log("Funny enabled HQ")
+        document.getElementById("drift").src = "img/hq-status.png"
+    } else {
+        document.getElementById("drift").src = "img/kort.png"
+        document.getElementById("drift").useMap = "#kort"
+    }
+    
+</script>
+
+</main>
+<footer></footer>
+</body>
+</html>

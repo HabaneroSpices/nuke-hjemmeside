@@ -1,0 +1,27 @@
+@font-face {
+    font-family: "NotoSansReg";
+    src: url("../font/NotoSans-Regular.ttf");
+  }
+@font-face {
+    font-family: "NotoSansBold";
+    src: url("../font/NotoSans-Bold.ttf");
+}
+body{
+    font-family: NotoSansReg;
+}
+h1 {
+    font-family: NotoSansBold;
+}
+#indexLink { 
+    width: 10%;
+    color: #000;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    /* background-color: #FFF; */
+}
+#indexLink:hover {
+    background-color: #99aaed;
+}
