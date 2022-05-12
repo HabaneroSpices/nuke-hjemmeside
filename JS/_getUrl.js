@@ -5,4 +5,3 @@ function getUrlVars() {
     });
     return vars;
 }
-//TODO Rename this document to main.js & update paths.
