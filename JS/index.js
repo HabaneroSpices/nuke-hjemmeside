@@ -5,16 +5,7 @@ function advancedSwitch() {
     location.reload();
 }
 
-
-function main() {
-    if (getUrlVars()["loc"]) { // Create back button if any location attribute is present.
-        var backBtn = document.createElement("a")
-        backBtn.setAttribute("role","button")
-        backBtn.textContent = "Tilbage til kort"
-        backBtn.setAttribute("href","index.html")
-        backBtn.classList = "btn btn-outline-danger"
-        document.getElementById("containerLogo").appendChild(backBtn)
-    }
+function loadImages(){
     if (getUrlVars()["loc"] == "thisted") {
         console.log(advSwitchState)
         if (advSwitchState == "true") {
@@ -44,4 +35,16 @@ function main() {
     }
 }
 
+function main() {
+    if (getUrlVars()["loc"]) { // Create back button if any location attribute is present.
+        var backBtn = document.createElement("a")
+        backBtn.setAttribute("role","button")
+        backBtn.textContent = "Tilbage til kort"
+        backBtn.setAttribute("href","index.html")
+        backBtn.classList = "btn btn-outline-danger"
+        document.getElementById("containerLogo").appendChild(backBtn)
+    }
+}
+
 main()
+loadImages()
